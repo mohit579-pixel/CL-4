@@ -1,0 +1,75 @@
+C:\Users\pawar>mongosh
+Current Mongosh Log ID: 67b85627dd08f89aa34d7941
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.9
+Using MongoDB:          8.0.4
+Using Mongosh:          2.3.9
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2025-02-21T15:35:01.619+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use myNewDatabase
+switched to db myNewDatabase
+myNewDatabase> db.myNewCollection.insertOne({name: "John Doe", age: 30})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b85633dd08f89aa34d7942')
+}
+myNewDatabase>  db.myNewCollection.insertOne({name: "Jane Doe", age: 25})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b8563bdd08f89aa34d7943')
+}
+myNewDatabase> db.myNewCollection.findOne({name: "JohnDoe"})
+null
+myNewDatabase> db.myNewCollection.updateOne ({name: "JohnDoe"}, {$set: {age: 31}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+myNewDatabase> db.myNewCollection.deleteOne({name: "Bob"})
+{ acknowledged: true, deletedCount: 0 }
+myNewDatabase>C:\Users\pawar>mongosh
+Current Mongosh Log ID: 67b85627dd08f89aa34d7941
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.9
+Using MongoDB:          8.0.4
+Using Mongosh:          2.3.9
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2025-02-21T15:35:01.619+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> use myNewDatabase
+switched to db myNewDatabase
+myNewDatabase> db.myNewCollection.insertOne({name: "John Doe", age: 30})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b85633dd08f89aa34d7942')
+}
+myNewDatabase>  db.myNewCollection.insertOne({name: "Jane Doe", age: 25})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67b8563bdd08f89aa34d7943')
+}
+myNewDatabase> db.myNewCollection.findOne({name: "JohnDoe"})
+null
+myNewDatabase> db.myNewCollection.updateOne ({name: "JohnDoe"}, {$set: {age: 31}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+myNewDatabase> db.myNewCollection.deleteOne({name: "Bob"})
+{ acknowledged: true, deletedCount: 0 }
+myNewDatabase>
